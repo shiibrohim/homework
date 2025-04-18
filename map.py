@@ -1,6 +1,5 @@
 from math import sqrt
 
-
 # 1
 # son = [2, 34, 456]
 # a = list(map(lambda x: x * len(str(x)), son))
@@ -170,11 +169,133 @@ from math import sqrt
 
 
 # 15
-def masala():
-    a = list(filter(lambda x: x == x[::-1], lst))
-    r = list(map(lambda x: x.capitalize(), a))
-    return r
+# def masala():
+#     a = list(filter(lambda x: x == x[::-1], lst))
+#     r = list(map(lambda x: x.capitalize(), a))
+#     return r
+#
+#
+# lst = ['kalit', 'ovqat', 'moshina', 'radar', 'sumka']
+# print(masala())
 
 
-lst = ['kalit', 'ovqat', 'moshina', 'radar', 'sumka']
-print(masala())
+# uy ishi 16 aprel
+
+from functools import reduce
+
+
+# 1,
+
+# def tub(a):
+#     if a < 2:
+#         return False
+#     for i in range(2, int(a ** 0.5) + 1):
+#         if a % i == 0:
+#             return False
+#     return True
+#
+#
+# def masala():
+#     a = list(filter(lambda x: tub(x), lst))
+#     return a
+#
+#
+# lst = [2, 5, 3, 11, 5, 66, 7, 88, 9, 100]
+# print(masala())
+
+
+# 2
+
+# def factorial(a):
+#     f, b = 1, [i for i in range(1, a + 1)]
+#     for i in b:
+#         f *= i
+#     return f
+#
+#
+# def masala():
+#     a = list(map(lambda x: factorial(x), lst))
+#     return a
+#
+#
+# lst = [4, 12, 24, 5, 40]
+# print(masala())
+
+
+# 3
+
+# def masala():
+#     return list(map(lambda i: len(list(filter(lambda x: x in un, i))), st.split()))
+#
+#
+# un = ['a', 'i', 'e', 'u', 'o', "o'"]
+# st = input("Matini kiriting: ")
+# print(masala())
+
+
+# 4
+
+# def masala():
+#     return list(map(lambda x: x.capitalize(), list(filter(lambda x: x == x[::-1], lst))))
+#
+#
+# lst = ['kiyik', 'salom', 'soz', 'radar', 'level']
+# print(masala())
+
+
+# 6
+
+# def masala():
+#     a = reduce(lambda x, y: x if len(x) > len(y) else y, lst)
+#     return a
+#
+#
+# lst = ["moshina", "IT", "noutbuk", "kalit"]
+# print(masala())
+
+
+# 7
+
+# def masala():
+#     katta = reduce(lambda x, y: x if x > y else y, lst)
+#     kichik = reduce(lambda x, y: x if x < y else y, lst)
+#     return katta - kichik
+#
+#
+# lst = [1, 2, 3, 4, 5, 6, 7]
+# print(masala())
+
+
+# 8
+
+# def masala():
+#     a = ' '.join(list(map(lambda x: ''.join(list(filter(lambda y: y not in un, x))), st.split())))
+#     return a
+#
+#
+# un = ['a', 'i', 'e', 'u', 'o', "o'"]
+# st = input("Matini kiriting: ")
+# print(masala())
+
+
+# 9
+
+# def masala():
+#     a = list(filter(lambda x: lst.count(x) == 1, lst))
+#     return a
+#
+#
+# lst = [1, 'moshina', 1, 'kalit', 2, 'kalit', 'moshina', 2, 3, 'noutbuk', 4, 'eshik', 5]
+# print(masala())
+
+
+# 10
+
+def masala_10():
+    a = list(filter(lambda x: len(x) >= 10, list(map(lambda x: x[0] + x[1], zip(matin.split(), matin1.split())))))
+    return a
+
+
+matin = input("1-Matini kiriting: ")
+matin1 = input("2-Matini kiriting: ")
+print(masala_10())
